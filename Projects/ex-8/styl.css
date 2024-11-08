@@ -1,0 +1,82 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation menu */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('image.png'); /* Replace with your own image */
+    background-size: cover;
+    color: #fff;
+}
+
+/* About section */
+#about {
+    padding: 50px 0;
+}
+
+/* Portfolio section */
+#portfolio {
+    padding: 50px 0;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+/* Contact section */
+#contact {
+    padding: 50px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Responsive styles (add media queries as needed) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+    .navbar a {
+        margin-right: 10px;
+    }
+    /* Add more responsive styles here */
+}

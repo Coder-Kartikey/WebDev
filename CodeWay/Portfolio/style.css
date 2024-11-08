@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    /* Section 1 */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 100%;
+    height: 261px;
+
+    background: #827676;
+    border: 1px solid rgba(14, 11, 11, 0.1);
+    border-radius: 2px;
+}
+
+#name {
+    /* Kartikey Pandey */
+    position: absolute;
+    width: 658px;
+    height: 106px;
+    left: calc(50% - 658px/2 + 35.5px);
+    top: 24px;
+
+    font-family: 'Jacques Francois Shadow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 106px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#detail {
+    /* WebDev Intern at CodeWay */
+    position: absolute;
+    height: 53px;
+    left: 35%;
+    top: 144px;
+
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 53px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.grid-contener {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#divskills {
+    /* Section 2 */
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    background: #646060;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+#skills {
+    /* Skills */
+    position: absolute;
+    width: 97px;
+    height: 48px;
+    left: 60px;
+    top: 10%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.list {
+    /* HTML */
+
+    position: absolute;
+    height: 36px;
+    left: 181px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.item1 {
+    top: 30%;
+}
+
+.item2 {
+    top: 45%;
+}
+
+.item3 {
+    top: 60%;
+}
+
+.item4 {
+    top: 75%;
+}
+
+#project {
+    /* Section 3 */
+
+    box-sizing: border-box;
+
+    position: relative;
+    height: 410px;
+
+    background: #826868;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+
+}
+
+#projects {
+
+    position: absolute;
+    width: 97px;
+    height: 48px;
+    left: 60px;
+    top: 10%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#casino-game {
+
+    position: absolute;
+    height: 36px;
+    left: 181px;
+    top: 102px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+p {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+
+#resume {
+    /* Section 4 */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 100%;
+    height: 193px;
+
+    background: #5C4848;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+
+}
+
+#resumeline {
+    position: absolute;
+    width: 97px;
+    height: 48px;
+    left: 60px;
+    top: 30px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+a {
+    position: absolute;
+    height: 36px;
+    left: 181px;
+    top: 102px;
+    color: chartreuse;
+}
+
+#contact {
+    /* Section 5 */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 100%;
+    height: 257px;
+
+    background: #683A3A;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+
+}
+
+#contactline {
+    position: absolute;
+    width: 97px;
+    height: 48px;
+    left: 60px;
+    top: 30px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+footer {
+    /* Section 6 */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 100%;
+    height: 136px;
+
+    background: black;
+    border: 1px solid black;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ebabab;
+}

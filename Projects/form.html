@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form</title>
+        <style>
+            body{
+                background-attachment: scroll;
+                /*background-image:url(https://knit.ac.in/images/logo.png); */
+            }
+            /* Use (.) for location class and (#) for location id and use nothing for element */
+            #divname{
+                width: fit-content;
+                background-color: rgb(241, 81, 7);
+            }
+            #divcity{
+                width: fit-content;
+                background-color: brown;
+            }
+            #divpin{
+                width: fit-content;
+                background-color: blue;
+            }
+            #h{
+                text-align: center;
+                background-color: blanchedalmond;
+            }
+            #name{
+                width: 5cm;
+            }
+            #city{
+                width: 5cm;
+            }
+            #pin{
+                width: 5cm;
+            }
+            </style>
+    </head>
+    <body bgcolor="black">
+        <h1 id="h">
+            KP
+        </h1>
+        <form method="get">
+            <div id="divname">
+                <label for="name">Enter your name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div id="divcity">
+                <label for="city">Enter your city&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp :</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div id="divpin">
+                <label inputmode="text" for="pin">Enter your pincode :</label>
+                <input type="number" name="pincode" id="pin">
+            </div>
+        </form>
+    </body>
+</html>

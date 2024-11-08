@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        #main {
+            margin-top: 0.5em;
+            margin-bottom: 2em;
+            border-radius: 10px;
+            width: 365px;
+            box-sizing: border-box;
+            background-color: white;
+            padding: 8px;
+        }
+
+        body {
+            background-color: rgb(217, 235, 235);
+            display: flex;
+            justify-content: center;
+        }
+
+        .text {
+            font: 30px sans-serif;
+            text-decoration: solid;
+            padding: 10px;
+        }
+
+        .footer {
+            font: 12px sans-serif;
+            color: blue;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-radius: 25px;
+            background-color: rgb(235, 230, 239);
+            display: inline-flex;
+            justify-content: center;
+            margin-left: 119px;
+            margin-right: 120px;
+            margin-bottom: 15px;
+        }
+
+        .textc {
+            color: rgb(10, 155, 155);
+            font: 18px sans-serif;
+            padding: 10px;
+            margin: 2px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        .textbox {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: 1px solid rgb(183, 202, 202);
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="box">
+
+        <div class="image" id="image">
+            <img src="card.png" alt="image">
+        </div>
+
+        <div id="boxcont" class="boxc">
+            <div id="nature" class="textc textbox">
+                Nature
+            </div>
+            <div id="lake" class="textc textbox">
+                Lake
+            </div>
+        </div>
+
+        <div id="content" class="cont">
+            <div class="text">
+                Lago di Braies
+            </div>
+            <div class="textc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in vel odio saepe. Explicabo nobis
+                quam qui, autem dolores architecto similique laborum placeat.
+            </div>
+        </div>
+
+        <footer>
+            <div id="link" class="footer">
+                Read more
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

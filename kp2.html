@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>My First JavaScript Program</title>
+                <script src="script.js" defer></script>
+                <style>
+                        .div{
+                                height: 200px;
+                                width: 70px;
+                                border: 2px solid black;
+                                margin-left: 48%;
+                        }
+                        .subdiv{
+                                height: 50px;
+                                width: 50px;
+                                border: 2px solid black;
+                                border-radius: 50%;
+                                margin: 10px;
+                        }
+                        .f{
+                                background-color: red;
+                        }
+                        .s{
+                                background-color: yellow;
+                        }
+                        .t{
+                                background-color: green;
+                        }
+                </style>
+        </head>
+        <body>
+                <h1>Hello, World!</h1>
+
+                <form method="get">
+                Name: <input type="text" name="name"><br>
+                E-mail: <input type="text" name="email"><br>
+                <input type="submit">
+                <input type="reset">
+        </form>
+        <form action="" method="get">
+
+                <label for="num1">Number 1:</label>
+                <input type="text" id="num1">
+                <label for="num2">Number 2:</label>
+                <input type="text" id="num2">
+                <button onclick="calculateSum()">Calculate Sum</button>
+                <button type="reset">RESET</button>
+                <p id="result"></p>
+        </form>
+
+        <div class="div">
+                <div class="subdiv f"></div>
+                <div class="subdiv s"></div>
+                <div class="subdiv t"></div>
+        </div>
+                <!-- addNumbers(2, 5) -->
+        </body>
+</html>
