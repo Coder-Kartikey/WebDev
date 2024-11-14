@@ -8,5 +8,13 @@
   "keywords": [],
   "author": "CoderKP",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.7",
+    "uuid": "^11.0.2"
+  }
 }
