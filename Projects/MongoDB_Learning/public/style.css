@@ -1,0 +1,39 @@
+body{
+        margin: 2rem;
+
+}
+.chat{
+        background-color: rgb(213, 227, 245);
+        margin: 0.5rem;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        display: inline-block;
+}
+
+.msg{
+        background-color: dodgerblue;
+        color: white;
+        padding: 0.1rem 1rem;
+        border-radius: 2rem;
+}
+
+.button{
+        background-color: rgba(0, 0, 255, 0.76);
+        border: 0;
+        padding: 0.5rem 1rem;
+        border-radius: 1.5rem;
+}
+
+.editBtn{
+        background-color: rgba(0, 81, 255, 0.575);
+        border: 0;
+        padding: 0.5rem 1rem;
+        border-radius: 1.5rem;
+}
+
+.deleteBtn{
+        background-color: rgb(255, 0, 0);
+        border: 0;
+        padding: 0.5rem 1rem;
+        border-radius: 1.5rem;
+}
