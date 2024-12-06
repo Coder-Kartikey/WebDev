@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+import { Review } from './review.js';
+
 const listingSchema = mongoose.Schema({
         title : {
                 type : String,
@@ -14,10 +16,10 @@ const listingSchema = mongoose.Schema({
                 },
                 url :{
                         type : String,
-                        default : "https://unsplash.com/photos/photo-of-brown-bench-near-swimming-pool-Koei_7yYtIo",
+                        default : "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         set : ( v ) =>
                         v === "" 
-                                ? 'https://unsplash.com/photos/photo-of-brown-bench-near-swimming-pool-Koei_7yYtIo' 
+                                ? 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
                                 : v
                 }
         },
@@ -29,7 +31,19 @@ const listingSchema = mongoose.Schema({
         },
         country : {
                 type : String
-        }
+        },
+        reviews : [
+                {
+                        type : mongoose.Schema.Types.ObjectId,
+                        ref : "Review"
+                }
+        ]
 });
+
+listingSchema.post("findOneAndDelete", async (listing) => {
+        if(listing){
+                await Review.deleteMany({ _id : {$in : listing.reviews}});
+        }
+})
 
 export const Listing = mongoose.model('Listing', listingSchema);

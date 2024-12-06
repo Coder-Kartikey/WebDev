@@ -18,15 +18,15 @@
                         </div>
                         <div class="row">
                                 <div class="mb-3 col-md-4">
-                                        <label for="filename" class="form-label">Filename</label>
-                                        <input name="listing[filename]" required class="form-control"
+                                        <label for="image[filename]" class="form-label">Filename</label>
+                                        <input name="listing[image][filename]" required class="form-control"
                                                 value='<%= listing.image.filename %>' placeholder="Enter Image Filename"
                                                 type="text">
                                         <div class="invalid-feedback">Filename is required</div>
                                 </div>
                                 <div class="mb-3 col-md-8">
-                                        <label for="url" class="form-label">Link/URL</label>
-                                        <input name="listing[url]" required class="form-control" value='<%= listing.image.url %>'
+                                        <label for="image[url]" class="form-label">Link/URL</label>
+                                        <input name="listing[image][url]" required class="form-control" value='<%= listing.image.url %>'
                                                 placeholder="Enter Image URL/Link" type="url">
                                         <div class="invalid-feedback">URL is required</div>
                                 </div>

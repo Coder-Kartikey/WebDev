@@ -1,5 +1,6 @@
 <% title=" : New Listing" %>
-<% layout("/layouts/boilerplate.ejs") %><h2>List your place</h2>
+<% layout("/layouts/boilerplate.ejs") %>
+<h2>List your place</h2>
 <div class="row">
         <div class="col-8 offset-2">
                 <form action="/listings" method="post" novalidate class="needs-validation">
@@ -17,13 +18,13 @@
                         <div class="row">
                         <div class="mb-3 col-md-4">
                                 <label for="filename" class="form-label">Filename</label>
-                                <input name="listing[filename]" required class="form-control" placeholder="Enter Image Filename"
+                                <input name="listing[image][filename]" required class="form-control" placeholder="Enter Image Filename"
                                         type="text">
                                 <div class="invalid-feedback">Filename is required</div>
                         </div>
                         <div class="mb-3 col-md-8">
                                 <label for="url" class="form-label">Link/URL</label>
-                                <input name="listing[url]" required class="form-control" placeholder="Enter Image URL/Link"
+                                <input name="listing[image][url]" required class="form-control" placeholder="Enter Image URL/Link"
                                         type="url">
                                 <div class="invalid-feedback">URL is required</div>
                         </div>
