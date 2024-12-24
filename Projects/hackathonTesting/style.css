@@ -1,0 +1,43 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header.hero {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+    }
+    
+    header.hero .cta-button {
+        background-color: white;
+        color: #4CAF50;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    footer .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+    
+    footer .social-links a:hover {
+        text-decoration: underline;
+    }
+    

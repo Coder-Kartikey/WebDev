@@ -59,6 +59,9 @@ int main()
 
         int rowIndex=5;
         vector<int> v;
+        int a;
+        cin>>a;
+        cout<<a<<endl;
         v= getRow(rowIndex);
         for (int i = 0; i < rowIndex; i++)
         {
