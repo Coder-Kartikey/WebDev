@@ -6,9 +6,11 @@ app.engine('ejs', ejsMate);
 
 import path from 'path';
 
-import listings from "./routes/listing.mjs";
+import listingsRouter from "./routes/listing.mjs";
 
-import reviews from "./routes/review.mjs";
+import reviewsRouter from "./routes/review.mjs";
+
+import userRouter from "./routes/user.mjs";
 
 import { ExpressError } from "./utils/ExpressError.js";
 
@@ -19,6 +21,12 @@ import methodOverride from 'method-override';
 import session, { Cookie } from 'express-session';
 
 import flash from 'connect-flash';
+
+import passport from 'passport';
+
+import LocalStrategy from 'passport-local';
+
+import User from './models/user.js';
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/wonderlust');
@@ -52,10 +60,28 @@ const sessionOptions = {
 app.use(session(sessionOptions));
 app.use(flash());
 
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use((req, res, next) => {
         res.locals.success = req.flash("success");
         res.locals.error = req.flash("error");
+        res.locals.currentUser = req.user;
         next();
+});
+
+app.get("/fakeuser", async (req, res) => {
+        const user = new User({
+                email: "fakeuser@example.com",
+                username: "fakeuser"
+        });
+
+        const newUser = await User.register(user, "chicken");
+        res.send(newUser);
 });
 
 // Root route
@@ -64,15 +90,18 @@ app.get("/", (req,res) => {
         res.redirect("/listings");
 });
 
-app.use("/listings",listings);
+app.use("/listings",listingsRouter);
 
-app.use("/listings/:id/reviews",reviews);
+app.use("/listings/:id/reviews",reviewsRouter);
+
+app.use("/",userRouter);
 
 app.all("*", (req, res, next) =>{
         next(new ExpressError(404,"Page not found!"));
 });
 
 app.use((err, req, res, next) => {
+        console.error("Error caught in error handler:", err);
         let { statusCode=500, massage="Something went wrong!" } = err;
         res.status(statusCode).render("error.ejs",{err, massage});
         // res.status(statusCode).send(massage);
