@@ -100,6 +100,7 @@ body{
 
 .add-btn{
         background-color: #fe424d;
+        margin: 0rem 0rem 1rem 0rem;
         border: none;
 }
 
@@ -108,6 +109,18 @@ body{
 .edit-btn{
         background-color: #fe424d;
         border: none;
+        margin: 0rem 0rem 1rem 0rem;
+}
+
+.edit-listing-card{
+        border: none;
+        padding-top: 0.5rem;
+}
+
+.edit-listing-card img{
+        width: 50%;
+        object-fit: cover;
+        border-radius: 0.5rem;
 }
 
 /* Show Page */

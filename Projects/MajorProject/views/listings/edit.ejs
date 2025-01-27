@@ -1,8 +1,9 @@
 <% title=" : Edit " +listing.title.toString().toUpperCase() %>
 <% layout("/layouts/boilerplate.ejs") %>
+<h2 class="">Edit Details</h2>
 <div class="row">
         <div class="col-8 offset-2">
-                <form action="/listings/<%= listing._id %>?_method=PUT" method="post" novalidate class="needs-validation">
+                <form action="/listings/<%= listing._id %>?_method=PUT" method="post" novalidate enctype="multipart/form-data" class="needs-validation">
                         <div class="mb-3">
                                 <label for="title" class="form-label">Title</label>
                                 <input name="listing[title]" class="form-control" required value='<%= listing.title %>'
@@ -16,21 +17,21 @@
                                         type="text"><%= listing.description %></textarea>
                                 <div class="invalid-feedback">Description is required</div>
                         </div>
+
                         <div class="row">
-                                <div class="mb-3 col-md-4">
-                                        <label for="image[filename]" class="form-label">Filename</label>
-                                        <input name="listing[image][filename]" required class="form-control"
-                                                value='<%= listing.image.filename %>' placeholder="Enter Image Filename"
-                                                type="text">
-                                        <div class="invalid-feedback">Filename is required</div>
-                                </div>
-                                <div class="mb-3 col-md-8">
-                                        <label for="image[url]" class="form-label">Link/URL</label>
-                                        <input name="listing[image][url]" required class="form-control" value='<%= listing.image.url %>'
-                                                placeholder="Enter Image URL/Link" type="url">
-                                        <div class="invalid-feedback">URL is required</div>
+                                <label for="">Image</label>
+                                <div class="card edit-listing-card ">
+                                        <img src="<%= originalImage %>" class="edit-card-img-top show-img mb-2"
+                                                alt="<%= listing.image.filename %>">
+                                        <div class="mb-3 col-md-8">
+                                                <label for="image[url]" class="form-label">Want to change!</label>
+                                                <input name="listing[image][url]" class="form-control"
+                                                        placeholder="Enter Image URL/Link" type="file">
+                                                <div class="invalid-feedback">Image is required</div>
+                                        </div>
                                 </div>
                         </div>
+
                         <div class="mb-3">
                                 <label for="price" class="form-label">Price</label>
                                 <input name="listing[price]" class="form-control" required value='<%= listing.price %>'

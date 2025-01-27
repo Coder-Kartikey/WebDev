@@ -1,3 +1,9 @@
+import 'dotenv/config';
+
+if (process.env.NODE_ENV !== 'production') {
+        console.log('Development mode: dotenv loaded');
+}
+
 import express from 'express';
 const app = express();
 
@@ -27,6 +33,9 @@ import passport from 'passport';
 import LocalStrategy from 'passport-local';
 
 import User from './models/user.js';
+
+import multer from 'multer';
+const upload = multer({ dest: 'uploads/' });
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/wonderlust');
