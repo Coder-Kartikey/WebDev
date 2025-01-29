@@ -26,6 +26,8 @@ import methodOverride from 'method-override';
 
 import session, { Cookie } from 'express-session';
 
+import Mongostore from 'connect-mongo';
+
 import flash from 'connect-flash';
 
 import passport from 'passport';
@@ -37,8 +39,10 @@ import User from './models/user.js';
 import multer from 'multer';
 const upload = multer({ dest: 'uploads/' });
 
+const dbUrl=process.env.ATLASDB_URL;
+
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/wonderlust');
+        await mongoose.connect(dbUrl);
 }
 
 main().then( () => {
@@ -55,8 +59,21 @@ app.use(express.static(path.join(path.dirname('app.js'),'public')));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
+const store = Mongostore.create({
+        mongoUrl: dbUrl,
+        touchAfter: 24 * 3600,
+        crypto: {
+                secret: process.env.SESSION_SECRET,
+        },
+});
+
+store.on("error", function(e) {
+        console.log("Session store error", e);
+});
+
 const sessionOptions = {
-        secret : "mysupersecretcode",
+        store,
+        secret : process.env.SESSION_SECRET,
         resave : false,
         saveUninitialized : true,
         cookie: {
