@@ -4,14 +4,21 @@ let gameStatus= false;
 let level=0;
 let gameSeq=[];
 let usrSeq=[];
+let rulesContainer = document.getElementById("rules-container");
+let gameContainer = document.getElementById("game-container");
 
 document.addEventListener("keypress", function gameStarter(){
         if(gameStatus==false){
+                rulesContainer.style.display = "none";
+                // gameContainer.style.display = "flex";
+                gameContainer.classList.remove('game-container-before-start');
+                gameContainer.classList.add('game-container-after-start');
+
                 h2.innerText=`Game Started!`;
                 // btnFlash(1);
                 gameStatus=true;
 
-                setTimeout(levelUp,1000);
+                setTimeout(levelUp, 1000);
         }
 });
 
@@ -59,5 +66,8 @@ function gameReset(){
         usrSeq=[];
         level=0;
         gameStatus=false;
+        rulesContainer.style.display = "block";
+        // gameContainer.classList.remove('game-container-after-start');
+        // gameContainer.classList.add('game-container-before-start');
         h2.innerText="Press Any Key To Start";
 }

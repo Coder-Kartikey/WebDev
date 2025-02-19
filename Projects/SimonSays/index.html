@@ -3,13 +3,25 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         <title>Simon Says</title>
 </head>
 <body>
         <h1>Simon Says</h1>
-        <h2>Press Any Key To Start</h2>
-        <div class="container">
+        <div id="rules-container">
+                <h3>Rules:</h3>
+                <ul>
+                    <li>Press any key to start the game</li>
+                    <li>Watch the sequence of colors that light up</li>
+                    <li>Click the colors in the same sequence</li>
+                    <li>Each level adds one more color to remember</li>
+                    <li>If you make a mistake, the game ends</li>
+                </ul>
+                <!-- <h3>Press Any Key To Start</h3> -->
+        </div>
+        <h2 id="game-message">Press Any Key To Start</h2>
+        <div class="container game-container-before-start" id="game-container">
                 <div class="lineOne">
                         <div class="btn btn1" type="button" id="0"></div>
                         <div class="btn btn2" type="button" id="1"></div>
@@ -19,6 +31,17 @@
                         <div class="btn btn4" type="button" id="3"></div>
                 </div>
         </div>
+        <footer class="footer">
+                <p>&copy; 2024 Simon Says Game | Created by Kartikey</p>
+                <div class="social-links">
+                    <a href="https://github.com/Coder-Kartikey" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/coderkp" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+        </footer>
         <script src="app.js"></script>
 </body>
 </html>
